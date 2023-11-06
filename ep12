@@ -1,0 +1,50 @@
+const express = require('express'); 
+const app = express(); 
+const port = 3000; 
+// Middleware to parse JSON and URL-encoded data 
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true })); 
+// Serve a simple HTML form 
+app.get('/', (req, res) => { 
+res.send(` 
+<html> 
+<body> 
+<h1>Enter your first and last name:</h1> 
+<form action="/greet" method="post"> 
+<label for="firstName">First Name:</label> 
+<input type="text" name="firstName" required><br> 
+<label for="lastName">Last Name:</label> 
+<input type="text" name="lastName" required><br> 
+<input type="submit" value="Submit"> 
+</form> 
+</body> 
+</html> 
+`); 
+}); 
+// Handle POST request with user input 
+app.post('/greet', (req, res) => { 
+const firstName = req.body.firstName; 
+const lastName = req.body.lastName; 
+const greeting = `Namaskar, ${firstName} ${lastName}!`; 
+console.log(`Namaskar, ${firstName} ${lastName}!`) 
+res.send(` 
+<html> 
+<body> 
+<h1>Enter your first and last name:</h1> 
+<form action="/greet" method="post"> 
+<label for="firstName">First Name:</label> 
+<input type="text" name="firstName" required><br> 
+<label for="lastName">Last Name:</label> 
+<input type="text" name="lastName" required><br>
+ype ere ype ere 
+<input type="submit" value="Submit"> 
+</form> 
+${greeting} 
+</body> 
+</html> 
+`); 
+}); 
+app.listen(port, () => { 
+console.log(`Server is running on http://localhost:${port}`); 
+});
+
