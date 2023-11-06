@@ -1,0 +1,43 @@
+.ele2{
+    margin-left: 86px;
+}
+.ele3{
+    margin-left: 71px;
+}
+.ele4{
+    margin-left: 104px;
+}
+#but1{
+    margin-left: 20px;
+}
+#but2{
+    margin-left: 35px;
+}
+.main_body{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 275px;
+}
+html { 
+    background: url(blueback.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+/* body{
+    color: azure;
+} */
+
+/* body {
+    background-image: url('blueback.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
